@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fancyBox - Fancy jQuery Lightbox Alternative | Demonstration</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" media="screen" />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// create iframe popup box
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$(".fancybox").fancybox();
+		
+		});
+
+		$(window).load(function(){
+			$("#wdm_content").mCustomScrollbar({
+				scrollButtons:{enable:true},
+				theme:"light-thick"				
+			});
+
+			// $("#content-3").mCustomScrollbar({
+			// 	scrollButtons:{enable:true},
+			// 	theme:"light-thick"
+			// });
+		});
+	</script>
+
+	<style type="text/css">
+		.content {
+		  	display: none;
+		    background: #333;
+		    height: 400px;
+		    /* box-sizing: border-box; */
+		}
+
+		[class*='close-'] {
+		  color: #777;
+		  font: 14px/100% arial, sans-serif;
+		  position: absolute;
+		  right: 5px;
+		  text-decoration: none;
+		  text-shadow: 0 1px 0 #fff;
+		  top: 5px;
+		}
+
+		.close-classic:after {
+		  content: 'X';
+		  /* ANSI X letter */
+		}
+
+		.close-thin:after {
+		  content: '×';
+		  /* UTF-8 symbol */
+		}
+
+		.close-thik:after {
+		  margin-left:2px;
+		  content: '✖';
+		  /* UTF-8 symbol */
+		}
+		/* Dialog */
+
+		.dialog {
+		  background: #ddd;
+		  border: 1px solid #ccc;
+		  border-radius: 5px;
+		  float: left;
+		  height: 25px;
+		  margin: 20px;
+		  position: relative;
+		  width: 50px;
+		}
+		/* Container */
+
+		.container {
+		  width: 576px;
+		  margin: 0 auto;
+
+		}
+
+		.container:after {
+		  content: '';
+		  display: block;
+		  clear: both;
+		}
+
+		
+	</style>
+
+</head>
+<body>
+	<ul>
+		<li><a id="fancybox-manual-b" href="javascript:;">Open single item, custom options</a></li>
+		<li><a class='fancybox' href='#wdm_content'>Quick View</a></li>
+	</ul>
+
+
+	<div id="wdm_content" style="display:none;height:300px;" class="mCustomScrollbar" data-mcs-theme="dark">
+		<h1>fancyBox - iframe demo</h1>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque justo ac eros consectetur bibendum. In hac habitasse platea dictumst. Nulla aliquam turpis et tellus elementum luctus. Duis sit amet rhoncus velit. Duis nisl ligula, mattis interdum blandit laoreet, mattis id ante. Cras pulvinar lacus vitae nisi egestas non euismod neque bibendum. Vestibulum faucibus libero id ante molestie ultricies. Vestibulum quis nibh felis. Vestibulum libero nisl, vehicula vel ullamcorper sit amet, tristique sit amet augue. Etiam urna neque, porttitor sed sodales lacinia, posuere a nisl. Vestibulum blandit neque in sapien volutpat ac condimentum sapien auctor. Ut imperdiet venenatis ultricies. Phasellus accumsan, sem eu placerat commodo, felis purus commodo ipsum, sit amet vulputate orci est viverra est.
+		</p>
+		<p>&nbsp;</p>
+		<p>
+			Aenean velit est, condimentum ut iaculis ut, accumsan at mi. Maecenas velit mi, venenatis ut condimentum at, ultrices vel tortor. Curabitur pharetra ornare dapibus. Ut volutpat cursus semper. In hac habitasse platea dictumst. Donec eu iaculis ipsum. Morbi eu dolor velit, a semper nunc.
+		</p>
+		<p>&nbsp;</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque justo ac eros consectetur bibendum. In hac habitasse platea dictumst. Nulla aliquam turpis et tellus elementum luctus. Duis sit amet rhoncus velit. Duis nisl ligula, mattis interdum blandit laoreet, mattis id ante. Cras pulvinar lacus vitae nisi egestas non euismod neque bibendum. Vestibulum faucibus libero id ante molestie ultricies. Vestibulum quis nibh felis. Vestibulum libero nisl, vehicula vel ullamcorper sit amet, tristique sit amet augue. Etiam urna neque, porttitor sed sodales lacinia, posuere a nisl. Vestibulum blandit neque in sapien volutpat ac condimentum sapien auctor. Ut imperdiet venenatis ultricies. Phasellus accumsan, sem eu placerat commodo, felis purus commodo ipsum, sit amet vulputate orci est viverra est.
+		</p>
+		<p>&nbsp;</p>
+		<p>
+			Aenean velit est, condimentum ut iaculis ut, accumsan at mi. Maecenas velit mi, venenatis ut condimentum at, ultrices vel tortor. Curabitur pharetra ornare dapibus. Ut volutpat cursus semper. In hac habitasse platea dictumst. Donec eu iaculis ipsum. Morbi eu dolor velit, a semper nunc.
+		</p>
+
+
+	</div>
+
+	<div class="container">
+
+		<div class="dialog">
+		  <a href="#" class="close-classic"></a>
+		</div>
+
+		<div class="dialog">
+		  <a href="#" class="close-thin"></a>
+		</div>
+
+		<div class="dialog">
+		  <a href="#" class="close-thik">asdf</a>
+		</div>
+	  
+	</div>
+
+	<div id="content-3" class="content">
+		<h2>Scrollbar position outside <br />theme: "light-thick" <br />with buttons</h2>
+		<hr />
+		<p>Lorem ipsum dolor sit amet...</p> 
+		<p><input type="text" value="input" /></p>
+		<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p> 
+		<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+		<p><input type="text" value="input" /></p>
+		<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+		<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident...</p> 
+		<p><textarea>textarea</textarea></p>
+		<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil...</p>
+		<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+		<hr />
+		<p>End of content.</p>
+	</div>
+
+</body>
+</html>	
